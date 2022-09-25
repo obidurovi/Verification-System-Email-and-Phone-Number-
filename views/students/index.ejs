@@ -1,0 +1,34 @@
+<!-- For ALl Students Info -->
+
+<div class="container my-5 student-table">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <a class="btn btn-sm btn-primary" href="/students/create">Add New Students</a>
+            <a class="btn btn-sm btn-danger" href="/students/unverified">Unverified</a>
+            <br>
+            <br>
+            
+        </div>
+
+        <% students.reverse().forEach((student, index) => { %>
+        <div class="col-md-4">
+           
+            <div class="card shadow-sm">
+                <div class="body">
+                    <div class="user-info">
+                        <% if (student.photo == 'avatar.png') { %>
+                            <img src="/images/<%= student.photo %> " alt="">
+                        <% } else { %>
+                            <img src="/images/students/<%= student.photo %> " alt="">
+                        <% } %>
+                        <h2><%= student.name %></h2>
+                        <p><%= student.cell %></p>
+                        <hr>
+                        <a class="btn btn-info" href="/students/<%= student.id %> ">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</div>

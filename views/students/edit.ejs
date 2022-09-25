@@ -1,0 +1,61 @@
+<!-- For Edit Form -->
+<div class="container my-5 student-form">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <a class="btn btn-sm btn-primary" href="/students">Back</a>
+            <br>
+            <br>
+            <div class="card shadow-sm">
+                <div class="card-header">
+                    <h2>Update <%= student.name %>  Data</h2>
+                </div>
+                <div class="card-body">
+                    
+                    <form action="/students/update/<%= student.id %>" method="POST" enctype="multipart/form-data">
+                        <div class="my-3">
+                            <label for="">Name</label>
+                            <input name="name" value="<%= student.name %>" type="text" class="form-control">
+                        </div>
+                        <div class="my-3">
+                            <label for="">Email</label>
+                            <input name="email" value="<%= student.email %>" type="text" class="form-control">
+                        </div>
+                        <div class="my-3">
+                            <label for="">Cell</label>
+                            <input name="cell" value="<%= student.cell %>" type="text" class="form-control">
+                        </div>
+                        <div class="my-3">
+                            <label for="">Cell</label>
+                            <select name="location"  name="" id="" class="form-control">
+                                <option value="">--Select--</option>
+                                <option <% if ( student.location == 'Mirpur' ) { %> selected <% } %> value="Mirpur">Mirpur</option>
+                                <option <% if ( student.location == 'Shahajadpur' ) { %> selected <% } %> value="Shahajadpur">Shahajadpur</option>
+                                <option <option <% if ( student.location == 'Dhanmondi' ) { %> selected <% } %> value="Dhanmondi">Dhanmondi</option>
+                                <option <option <% if ( student.location == 'Gulshan' ) { %> selected <% } %> value="Gulshan">Gulshan</option>
+                                <option <option <% if ( student.location == 'Badda' ) { %> selected <% } %> value="Badda">Badda</option>
+                            </select>
+                        </div>
+                        <div class="my-3">
+                                <h6><label for="">Upload Your Photo</label></h6>
+                                <br>
+                                <img class="preload-student" src="/images/students/<%= student.photo %>" alt="">
+                                <br>
+                                <label for="upload_student_photo">
+                                    <img src="http://simpleicon.com/wp-content/uploads/cloud-upload-1.png" alt="">
+                                </label>
+                                <input name="student-photo" type="file" class="" id="upload_student_photo">
+                        </div>
+                        <div class="my-3">
+                                <input type="submit" class="btn btn-sm btn-primary w-100" value="Update">
+                        </div>
+                        
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+ 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIM Verification</title>
+</head>
+<body>
+    <div class="card"  style="width: 50%; text-align: center; display: flex; justify-content: center; margin: auto;">
+        <div class="card-body">
+            <div class="card-header">
+                <h2>Hi <%= name %> , Provide Your OTP Code</h2>
+            </div>
+            <form action="/students/Verification/<%= id %> " method="post">
+                <input class="form-control" name="otp" type="text" placeholder="ex: 1234">
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

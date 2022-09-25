@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- StyleSheet -->
+    <link href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Data Tables Css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.css"/>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+
+    <%- body %> 
+
+
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <!-- Data Tables Js -->
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.js"></script>
+    <!-- JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+        // Make datatable
+        $('.ash-data-table').DataTable();
+
+        const studentImage = document.querySelector('#upload_student_photo');
+        const studentImagePreview = document.querySelector('.preload-student');
+
+        if ( studentImage ) {
+            studentImage.onchange = (e) => {
+            const imageUrl = URL.createObjectURL(e.target.files[0]);
+            studentImagePreview.setAttribute('src', imageUrl);
+        }
+        }
+
+        // Delete button manage
+        const delete_btn = document.querySelectorAll('.delete-btn');
+        if ( delete_btn ) {
+            delete_btn.forEach( item => {
+            item.onclick = (e) => {
+                const conf = confirm('are your sure?');
+
+                if ( conf ) {
+                    return true;
+                }else {
+                    return false;
+                }
+            }
+        })
+        }
+    </script>
+</body>
+</html>

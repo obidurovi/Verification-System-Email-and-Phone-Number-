@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+}
+
+.student-table img{
+    width: 40px;
+    height:  40px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.student-form label img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.student-form input[type="file"] {
+    display: none;
+}
+
+.preload-student {
+    max-width: 100%;
+}
+
+.student-single img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: block;
+    margin: 50px auto;
+    object-fit: cover;
+}
+
+.student-single {
+    text-align: center;
+}
+
+.user-info {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+
+}
+
+.user-info img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+.link-r{
+    text-decoration: none;
+    color: #333;
+}
